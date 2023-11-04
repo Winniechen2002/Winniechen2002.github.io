@@ -11,30 +11,33 @@ redirect_from:
 
 Education
 ======
-* B.S. in GitHub, GitHub University, 2012
-* M.S. in Jekyll, GitHub University, 2014
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
+* B.S. in Institute for Interdisciplinary Information Sciences, Tsinghua University, 2024 (expected)
 
-Work experience
+Research experience
 ======
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Feb, 2023 - Aug. 2023: Visiting student/ Research assistant
+  * Massachusetts Institute of Technology
+  * Duties included: 
+    - Develop a new dataset for soft-body materials robotics learning which combines vision and language in solving 
+ robotics tasks.
+    - Develop a new pipeline for automatically generating robotics learning tasks through the vision model and large language models.
+    - Build a render for a universal simulator.
+    - A paper was received by NIPS 2023
+    - A paper is being submitted to ICLR 2024
+  * Supervisor: Professor Joshua Tenenbaum
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Aug, 2022 - Dec. 2022: Research assistant
+  * Tsinghua University
+  * Duties included: 
+    - A recommendation system for the paper recommendation was built and further helped the recommendation system to recommend papers more fairly.
+  * Supervisor: Professor Zhixuan Fang, Professor Xiao Liu
+
+* Jan, 2022 - Mar. 2023: Research assistant
+  * Tsinghua University
+  * Duties included: 
+    - A seam carving algorithm for 3D model.
+    - Design spike sorting algorithm for biochip.
+  * Supervisor: Kaisheng Ma
 
 Publications
 ======
@@ -42,7 +45,7 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-Talks
+<!-- Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
@@ -56,4 +59,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Currently signed in to 43 different slack teams -->
