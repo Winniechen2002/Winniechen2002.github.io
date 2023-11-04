@@ -1,7 +1,7 @@
 ---
 title: "RoboGen: Towards Unleashing Infinite Data for Automated Robot Learning via Generative Simulation"
 collection: publications
-permalink: /publication/2010-10-01-paper-title-number-2
+permalink: /publication/RoboGen
 excerpt: 'We present RoboGen, a generative robotic agent that automatically learns diverse robotic skills at scale via generative simulation.'
 date: 2023
 venue: 'ICLR 2024'
