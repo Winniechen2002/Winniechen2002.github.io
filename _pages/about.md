@@ -8,5 +8,9 @@ redirect_from:
   - /about.html
 ---
 
-This is the site for Chen Feng.
+I am an undergraduate student at Tsinghua University in Beijing, China, with a passion for
+Robotics. My research goal is to build a universal robot to solve productivity challenges. I
+have conducted research at Tsinghua University, and I was a visiting student collaborating
+with robotics researchers at MIT, gaining valuable insights and aiming to make a significant
+impact in the field.
 
