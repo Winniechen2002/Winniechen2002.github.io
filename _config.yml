@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Chen Feng"
   avatar           : "my_photo.jpg"
-  bio              : "Student in Tsinghua University"
+  bio              : "Student in Tsinghua University IIIS(Yao class)"
   location         : "Beijing, China"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    :  # "http://yourfullgooglescholarurl.com"
+  googlescholar    :  "https://scholar.google.com/citations?user=xuVkkKwAAAAJ&hl=zh-CN"
   email            :  "chenf20@mails.tsinghua.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
