@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Chen Feng's Site"
 title_separator          : "-"
 name                     : &name "Chen Feng"
-description              : &description "Student in Tsinghua University"
+description              : &description "Student in The University of Hong Kong"
 url                      : https://winniechen2002.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "winniechen2002.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Chen Feng"
   avatar           : "my_photo.jpg"
-  bio              : "Student in Tsinghua University IIIS(Yao class)"
-  location         : "Beijing, China"
+  bio              : "Student in the University of Hong Kong IDS"
+  location         : "Hong Kong, China"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    :  "https://scholar.google.com/citations?user=xuVkkKwAAAAJ&hl=zh-CN"
-  email            :  "chenf20@mails.tsinghua.edu.cn"
+  email            :  "winniechen2002@connect.hku.hk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -115,6 +115,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  redbook          : "https://www.xiaohongshu.com/user/profile/5e1eb70800000000010022b7"
 
 
 # Reading Files
