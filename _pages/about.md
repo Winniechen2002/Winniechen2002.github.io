@@ -16,6 +16,8 @@ Love yourselves guys, the future is ours.
 
 ## Recent
 
+[2024-10] Published [EvalTask](https://winniechen2002.github.io/publication/EvalTask) on Arxiv.
+
 [2024-8] Being as a Ph.D. student at the University of Hong Kong.
 
 [2024-6] Graduated from the Institute for Interdisciplinary Information Sciences, Tsinghua University.
