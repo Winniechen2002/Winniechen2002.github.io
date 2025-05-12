@@ -1,0 +1,108 @@
+---
+layout: archive
+title: "访客地图"
+permalink: /visitormap/
+author_profile: true
+---
+
+<div class="visitormap-container">
+  <h2>全球访客统计</h2>
+  <p>下面的地球可视化展示了访问本网站的访客来源地。</p>
+  
+  <div id="visitor-globe" style="width: 100%; height: 600px; border: 1px solid #ddd; border-radius: 5px;"></div>
+  
+  <div class="visitor-stats" style="margin-top: 20px;">
+    <h3>访问统计</h3>
+    <p>总访问量: <span id="total-visits">加载中...</span></p>
+    <p>国家/地区数量: <span id="country-count">加载中...</span></p>
+    <p>今日访问: <span id="today-visits">加载中...</span></p>
+  </div>
+</div>
+
+<!-- 引入Globe.GL库 -->
+<script src="https://unpkg.com/globe.gl@2.26.3/dist/globe.gl.min.js"></script>
+<!-- 引入访客统计的API -->
+<script src="{{ base_path }}/assets/js/visitor-tracker.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 初始化3D地球
+    const globeEl = Globe()
+      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+      .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+      .pointsData([])
+      .pointAltitude('size')
+      .pointColor('color')
+      .pointRadius(0.5)
+      .pointsMerge(true)
+      .pointLabel(d => `${d.country}: ${d.visits} 访问`)
+      (document.getElementById('visitor-globe'));
+
+    // 控制地球大小适应容器
+    const resize = () => {
+      const container = document.getElementById('visitor-globe');
+      globeEl.width([container.clientWidth]);
+      globeEl.height([container.clientHeight]);
+    };
+    window.addEventListener('resize', resize);
+    resize();
+
+    // 动画旋转
+    let rotation = 0;
+    (function animateGlobe() {
+      rotation += 0.1;
+      globeEl.rotation({ lat: 0, lng: rotation, altitude: 1.5 });
+      requestAnimationFrame(animateGlobe);
+    })();
+
+    // 初始化访客跟踪器
+    const tracker = new VisitorTracker({
+      mockData: true, // 使用模拟数据，实际使用时设为false
+      // useGoogleAnalytics: true, // 如果要使用Google Analytics
+      refreshInterval: 60000 // 每分钟刷新一次数据（演示用）
+    });
+    
+    // 加载初始数据
+    tracker.init().then(({ visitorData, statistics }) => {
+      // 更新地球数据
+      globeEl.pointsData(visitorData);
+      
+      // 更新统计数字
+      updateStatistics(statistics);
+    });
+    
+    // 监听数据更新事件
+    document.addEventListener('visitordata-updated', function(e) {
+      const { visitorData, statistics } = e.detail;
+      
+      // 更新地球数据
+      globeEl.pointsData(visitorData);
+      
+      // 更新统计数字
+      updateStatistics(statistics);
+    });
+    
+    // 更新统计数字的函数
+    function updateStatistics(stats) {
+      document.getElementById('total-visits').textContent = stats.total;
+      document.getElementById('country-count').textContent = stats.countries;
+      document.getElementById('today-visits').textContent = stats.today;
+    }
+  });
+</script>
+
+<style>
+  .visitormap-container {
+    padding: 20px 0;
+  }
+  
+  #visitor-globe {
+    margin: 0 auto;
+  }
+  
+  .visitor-stats {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+  }
+</style> 
