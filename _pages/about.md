@@ -16,6 +16,8 @@ Love yourselves guys, the future is ours.
 
 ## Recent
 
+[2026-5] Published [DexHoldem](https://dexholdem.github.io/) on Arxiv.
+
 [2025-11] Published [GenDexHand](https://winniechen2002.github.io/GenDexHand/) on Arxiv.
 
 [2024-10] Published [EvalTask](https://winniechen2002.github.io/publication/EvalTask) on Arxiv.
