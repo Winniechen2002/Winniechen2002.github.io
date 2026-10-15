@@ -14,6 +14,9 @@ var breaks = [];
 
 function updateNav() {
 
+  // Pages using the personal navigation do not have the legacy menu.
+  if (!$nav.length || !$vlinks.length) return;
+
   var availableSpace = $btn.hasClass('hidden') ? $nav.width() : $nav.width() - $btn.width() - 30;
 
   // The visible list is overflowing the nav

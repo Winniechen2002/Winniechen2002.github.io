@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Chen Feng"
-  avatar           : "my_photo.jpg"
+  avatar           : "chen-feng.jpg"
   bio              : "Student in the University of Hong Kong IDS"
   location         : "Hong Kong, China"
   employer         :
@@ -224,7 +224,7 @@ defaults:
       path: ""
       type: publications
     values:
-      layout: single
+      layout: research-detail
       author_profile: true
       share: true
       comments: true

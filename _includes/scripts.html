@@ -1,4 +1,6 @@
-<script src="{{ base_path }}/assets/js/main.min.js"></script>
+{% unless page.layout == 'home' %}
+<script src="{{ base_path }}/assets/js/main.min.js?v=20261016"></script>
+{% endunless %}
 
 {% include analytics.html %}
-{% include /comments-providers/scripts.html %}
+{% include comments-providers/scripts.html %}

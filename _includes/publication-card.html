@@ -1,0 +1,10 @@
+<article class="publication-card">
+  <div class="publication-card__rail"><span class="project-number" aria-hidden="true">0{{ include.index }}</span><span class="project-year">{% if post.display_year %}{{ post.display_year }}{% else %}{{ post.date | date: '%Y' }}{% endif %}</span></div>
+  <div class="publication-card__body">
+    <div class="publication-card__meta"><span class="venue-badge{% if post.display_venue %} venue-badge--conference{% endif %}">{{ post.display_venue | default: post.venue }}</span><span>{{ post.research_topic }}</span></div>
+    <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.short_title | default: post.title }} <span aria-hidden="true">↗</span></a></h2>
+    <p class="publication-full-title">{{ post.title }}</p>
+    <p class="publication-summary">{{ post.home_summary | default: post.excerpt | markdownify | strip_html }}</p>
+    <div class="resource-links"><a href="{{ site.baseurl }}{{ post.url }}">Read overview <span aria-hidden="true">→</span></a>{% if post.paperurl %}<a href="{{ post.paperurl }}">Paper <span aria-hidden="true">↗</span></a>{% endif %}{% if post.project_url %}<a href="{{ post.project_url }}">Project <span aria-hidden="true">↗</span></a>{% endif %}</div>
+  </div>
+</article>
