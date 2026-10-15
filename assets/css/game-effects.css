@@ -1,0 +1,41 @@
+/* Native cursors keep the pointer responsive and preserve its exact click target. */
+@media (hover: hover) and (pointer: fine) {
+  html, body {
+    cursor: url("../../images/cursor-adventurer.svg") 2 2, auto;
+  }
+
+  :root body a, :root body button, :root body summary,
+  :root body [role="button"], :root body label[for],
+  :root body select, :root body input[type="checkbox"],
+  :root body input[type="radio"], :root body input[type="submit"],
+  :root body input[type="button"], :root body input[type="reset"] {
+    cursor: url("../../images/cursor-adventurer-active.svg") 2 2, pointer;
+  }
+
+  :root body input:not([type]), :root body input[type="text"],
+  :root body input[type="search"], :root body input[type="email"],
+  :root body input[type="password"], :root body input[type="url"],
+  :root body input[type="number"], :root body input[type="tel"],
+  :root body textarea, :root body [contenteditable="true"],
+  :root body [contenteditable="plaintext-only"] {
+    cursor: text;
+  }
+
+  :root body :disabled, :root body [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+}
+
+.game-click-particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+@media print, (prefers-reduced-motion: reduce) {
+  .game-click-particles { display: none; }
+}
