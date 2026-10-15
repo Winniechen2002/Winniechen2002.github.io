@@ -1,0 +1,15 @@
+<button class="arcade-launcher" id="arcade-launcher" type="button" aria-haspopup="dialog" aria-controls="dino-arcade" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2h9v8h-6v3h4v2h-6v5h3v2h-5v-6h-2v4H7v2H4v-7H2V7h2v4h3V9h6Z" fill="currentColor"/><path d="M18 4h2v2h-2Z" fill="#101212"/></svg>
+  <span>Start a game</span>
+</button>
+<dialog class="dino-arcade" id="dino-arcade" aria-labelledby="dino-title" aria-describedby="dino-instructions">
+  <header class="dino-header"><div><p>TAKE A LITTLE BREAK</p><h2 id="dino-title">Dino Run<span aria-hidden="true">.</span></h2></div><button type="button" class="dino-close" aria-label="Close game">✕</button></header>
+  <div class="dino-scoreboard"><span>ONE DINO. ONE MORE TRY.</span><div><span>SCORE <strong id="dino-score">00000</strong></span><span>BEST <strong id="dino-best">00000</strong></span></div></div>
+  <div class="dino-stage">
+    <canvas id="dino-canvas" width="720" height="260" tabindex="0" aria-label="Dinosaur runner. Jump over the cacti using Space, Up Arrow, or the Jump button."></canvas>
+    <div class="dino-overlay" id="dino-overlay"><h3 id="dino-message">Ready to run?</h3><p id="dino-subtitle">A tiny adventure between bigger quests.</p><button class="dino-primary" id="dino-start" type="button">Start run <span aria-hidden="true">→</span></button></div>
+  </div>
+  <div class="dino-controls"><button type="button" id="dino-jump">Jump <span aria-hidden="true">↑</span></button><button type="button" id="dino-pause" disabled>Pause</button><button type="button" id="dino-restart" disabled>Restart</button></div>
+  <p id="dino-instructions" class="dino-instructions"><kbd>Space</kbd> / <kbd>↑</kbd> jump · <kbd>P</kbd> pause · <kbd>Esc</kbd> close<br>On mobile, tap the track or use Jump. Best score stays on this device.</p>
+  <p class="dino-announcement" id="dino-announcement" role="status" aria-live="polite"></p>
+</dialog>

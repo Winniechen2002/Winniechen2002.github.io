@@ -59,7 +59,7 @@
   document.addEventListener('pointerdown', function (event) {
     if (event.pointerType !== 'mouse' || event.button !== 0 ||
         reducedMotion.matches || !finePointer.matches || document.hidden) return;
-    if (event.target.closest('input, textarea, select, [contenteditable], :disabled, [aria-disabled="true"]')) return;
+    if (event.target.closest('#dino-arcade, input, textarea, select, [contenteditable], :disabled, [aria-disabled="true"]')) return;
     if (!canvas && !makeCanvas()) return;
 
     var now = performance.now();

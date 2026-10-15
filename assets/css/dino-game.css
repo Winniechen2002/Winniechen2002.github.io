@@ -1,0 +1,55 @@
+.arcade-launcher {
+  position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:90;
+  display:flex;align-items:center;gap:11px;padding:13px 19px;
+  border:1px solid #c7f56888;border-radius:8px;background:#171f19;color:#c7f568;
+  box-shadow:0 5px 24px #0005;font:600 13px/1.4 var(--sans);cursor:pointer;
+}
+.arcade-launcher[hidden] {display:none;}
+.arcade-launcher svg {width:24px;height:24px;image-rendering:pixelated;}
+.arcade-launcher:hover {background:#253024;border-color:#c7f568;}
+.arcade-launcher:focus-visible,.dino-arcade button:focus-visible {outline:2px solid #92c9e6;outline-offset:4px;}
+.dino-arcade {
+  position:fixed;inset:0;margin:auto;width:min(760px,calc(100% - 32px));max-width:760px;
+  max-height:calc(100dvh - 32px);overflow:auto;box-sizing:border-box;padding:26px;
+  background:#101714;color:#f0f1e9;border:1px solid #47543e;border-radius:12px;
+  box-shadow:0 30px 100px #0009;font-family:var(--sans);overscroll-behavior:contain;
+}
+.dino-arcade:not([open]) {display:none;}
+.dino-arcade::backdrop {background:#050907d9;backdrop-filter:blur(6px);}
+.dino-header {display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.dino-header p {margin:0 0 7px;color:#a2aaa4;font:9px/1.5 var(--mono);letter-spacing:2px;}
+.dino-header h2 {margin:0;font:750 34px/1.2 var(--sans);letter-spacing:-1px;}
+.dino-header h2 span {color:#c7f568;}
+.dino-arcade button {font:600 12px/1.5 var(--sans);border:1px solid #465140;border-radius:5px;padding:10px 18px;background:#1d271f;color:#f0f1e9;cursor:pointer;}
+.dino-arcade button:hover:enabled {border-color:#c7f568;color:#c7f568;}
+.dino-arcade .dino-close {padding:6px;width:38px;height:38px;font-size:17px;}
+.dino-scoreboard {display:flex;justify-content:space-between;gap:15px;margin:24px 0 12px;font:9px/1.6 var(--mono);color:#a2aaa4;}
+.dino-scoreboard>div {display:flex;gap:22px;}
+.dino-scoreboard strong {color:#c7f568;font-weight:400;font-size:13px;margin-left:5px;}
+.dino-stage {position:relative;border:1px solid #344337;border-radius:6px;overflow:hidden;background:#121e18;}
+#dino-canvas {display:block;width:100%;height:260px;touch-action:none;}
+#dino-canvas:focus-visible {outline:2px solid #92c9e6;outline-offset:-3px;}
+.dino-overlay {position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;background:#111a14c9;text-align:center;}
+.dino-overlay[hidden] {display:none;}
+.dino-overlay h3 {font:700 27px/1.3 var(--sans);margin:0 0 10px;}
+.dino-overlay p {color:#b6c2b9;font:13px/1.7 var(--sans);margin:0 0 22px;}
+.dino-arcade .dino-primary {background:#c7f568;color:#101212;border-color:#c7f568;min-width:145px;}
+.dino-arcade .dino-primary:hover:enabled {background:#dcffa0;color:#101212;}
+.dino-controls {display:flex;gap:10px;margin-top:16px;}
+.dino-controls #dino-jump {flex:1;color:#c7f568;}
+.dino-controls button:disabled {opacity:.4;cursor:not-allowed;}
+.dino-instructions {margin:16px 0 0;font:11px/2 var(--sans);color:#a2aaa4;text-align:center;}
+.dino-instructions kbd {padding:2px 5px;background:#263328;border:1px solid #425042;border-radius:3px;color:#e1ebde;font:10px var(--mono);box-shadow:none;}
+.dino-announcement {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
+@media(max-width:600px) {
+  .arcade-launcher {right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:10px 13px;font-size:12px;}
+  .arcade-launcher svg {width:20px;height:20px;}
+  .dino-arcade {padding:18px;width:calc(100% - 20px);max-height:calc(100dvh - 20px);}
+  .dino-scoreboard {flex-wrap:wrap;gap:7px;margin-top:20px;}
+  .dino-scoreboard>div {margin-left:auto;}
+  .dino-header h2 {font-size:28px;}
+  .dino-controls {gap:8px;}
+  .dino-controls button {padding:11px 12px;}
+  .dino-overlay h3 {font-size:24px;}
+}
+@media print {.arcade-launcher,.dino-arcade {display:none!important;}}
