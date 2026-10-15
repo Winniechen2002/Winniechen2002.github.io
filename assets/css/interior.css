@@ -583,6 +583,50 @@
   min-height: 240px;
 }
 
+.visitor-map-status {
+  color: var(--muted);
+}
+
+.visitor-map-container #mapmyvisitors-widget {
+  width: 100% !important;
+}
+
+.visitor-map-container .mapmyvisitors-map {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 2.04;
+  background-size: 100% 100%;
+}
+
+.visitor-map-status [data-map-retry] {
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--accent);
+  font: inherit;
+  cursor: pointer;
+}
+
+.visitor-map-status [data-map-retry]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.no-js .visitor-map-status,
+.visitor-map-status[hidden],
+.visitor-map-status [hidden] {
+  display: none;
+}
+
+.visitor-map-caption {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.visitor-map-caption a {
+  color: var(--accent);
+}
+
 @media (max-width: 1050px) {
   .interior-page #main.interior-shell {
     padding: 28px 32px 60px;

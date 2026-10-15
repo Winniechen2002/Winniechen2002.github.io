@@ -72,6 +72,12 @@ social:
 
 
 # Analytics
+# Create a widget for https://winniechen2002.github.io/ at https://mapmyvisitors.com/add.
+# The previous ClustrMaps ID belongs to another website and must not be reused.
+visitor_map:
+  widget_id              : "VB8tKYudJbizg7c9IPk6y7GKf1hswKlctzaLOkzkJwQ"
+  statistics_url         : "https://mapmyvisitors.com/web/1c8vz"
+
 analytics:
   provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
   google:

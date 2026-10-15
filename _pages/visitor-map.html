@@ -9,5 +9,20 @@ lede: "A little perspective on where visitors to this site come from. Thanks for
 ---
 
 <div class="visitor-map-container">
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=7CTeFyC3wT_A3DlE7A976YOUbxvdVPWluGcvGoy_E6A&cl=ffffff&w=a"></script>
+  {% if site.visitor_map.widget_id and site.visitor_map.widget_id != empty %}
+  <div class="visitor-map-status" role="status" aria-live="polite">
+    <p data-map-message>Loading visitor map…</p>
+    <button type="button" data-map-retry hidden>Try again</button>
+  </div>
+  <script defer src="{{ base_path }}/assets/js/visitor-map.js?v=20261016"></script>
+  <script defer id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d={{ site.visitor_map.widget_id | uri_escape }}&amp;cl=ffffff&amp;w=a"></script>
+  <noscript><a href="{{ site.visitor_map.statistics_url | escape }}" title="Visitor statistics"><img src="https://mapmyvisitors.com/map.png?d={{ site.visitor_map.widget_id | uri_escape }}&amp;cl=ffffff" alt="World map of visitors to Chen Feng's website"></a></noscript>
+  {% else %}
+  <div class="visitor-map-status">
+    <p>The visitor map is being reconnected. Please check back soon.</p>
+  </div>
+  {% endif %}
 </div>
+{% if site.visitor_map.statistics_url and site.visitor_map.statistics_url != empty %}
+<p class="visitor-map-caption">Visitor locations are approximate. <a data-map-statistics href="{{ site.visitor_map.statistics_url | escape }}" target="_blank" rel="noopener noreferrer">View visitor statistics ↗</a></p>
+{% endif %}
