@@ -2,13 +2,13 @@
 
 <header class="personal-header">
   <div class="personal-header__inner">
-    <a class="personal-brand" href="{{ base_path }}/" aria-label="Chen Feng — home"><span class="brand-mark" aria-hidden="true">CF<span>_</span></span><span class="brand-note">CHEN FENG<br><small>ROBOTICS × CURIOSITY</small></span></a>
+    <a class="personal-brand" href="{{ base_path }}/" aria-label="Chen Feng — home">Chen Feng</a>
     <nav class="personal-nav" aria-label="Main navigation">
       <a href="{{ base_path }}/"{% if page.url == '/' %} aria-current="page"{% endif %}>About</a>
       {% for link in site.data.navigation.main %}
       <a href="{% unless link.url contains 'http' %}{{ base_path }}{% endunless %}{{ link.url }}"{% if page.url == link.url %} aria-current="page"{% elsif page.collection == 'publications' and link.url == '/publications/' %} aria-current="location"{% elsif page.collection == 'talks' and link.url == '/talks/' %} aria-current="location"{% endif %}>{{ link.title }}</a>
       {% endfor %}
     </nav>
-    <a class="header-contact" href="mailto:cf24@connect.hku.hk">LET'S TALK <span aria-hidden="true">↗</span></a>
+    <a class="header-contact" href="mailto:cf24@connect.hku.hk">Email</a>
   </div>
 </header>

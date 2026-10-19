@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Chen Feng's Site"
 title_separator          : "-"
 name                     : &name "Chen Feng"
-description              : &description "Student in The University of Hong Kong"
+description              : &description "Chen Feng (Winnie), a Ph.D. student at the University of Hong Kong working on robotics."
 url                      : https://winniechen2002.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "winniechen2002.github.io"
@@ -88,7 +88,7 @@ analytics:
 author:
   name             : "Chen Feng"
   avatar           : "chen-feng.jpg"
-  bio              : "Student in the University of Hong Kong IDS"
+  bio              : "Ph.D. student at the University of Hong Kong"
   location         : "Hong Kong, China"
   employer         :
   pubmed           :  # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

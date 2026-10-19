@@ -5,17 +5,15 @@ permalink: /cv/
 excerpt: "Chen Feng — education, research experience, publications, honors, and professional service."
 keywords: "Agentic Robotics, Dexterous Manipulation, Embodied Agents, Generative Simulation, Reinforcement Learning, Computer Vision"
 author_profile: false
-section_label: "Profile"
-kicker: "PROFILE / EXPERIENCE & EXPLORATION"
 redirect_from:
   - /resume
 ---
 
-Ph.D. student at the **University of Hong Kong**, advised by **Prof. Yi Ma**, working on dexterous manipulation, generative robotic simulation, and embodied-agent evaluation. I build real robot systems and benchmarks that connect data collection, policy learning, perception, and closed-loop decision making.
+I'm **Chen Feng**, a Ph.D. student at the **University of Hong Kong**, advised by **Prof. Yi Ma**. My research focuses on dexterous manipulation, generative robotic simulation, and embodied-agent evaluation.
 
 <div class="cv-actions">
-<a class="personal-button" href="{{ site.baseurl }}/files/Chen-Feng-CV.pdf" download>DOWNLOAD CV (PDF) <span aria-hidden="true">↓</span></a>
-<a class="text-link" href="mailto:cf24@connect.hku.hk">cf24@connect.hku.hk <span aria-hidden="true">↗</span></a>
+<a class="personal-button" href="{{ site.baseurl }}/files/Chen-Feng-CV.pdf" download>Download CV (PDF)</a>
+<a class="text-link" href="mailto:cf24@connect.hku.hk">cf24@connect.hku.hk</a>
 </div>
 
 ## Research interests

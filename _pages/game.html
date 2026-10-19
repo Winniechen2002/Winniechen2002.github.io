@@ -1,15 +1,14 @@
 ---
-layout: library
+layout: game
 title: "Game"
 permalink: /game/
 author_profile: false
 section_label: "Game"
 kicker: "SIDE QUESTS / PARTY UP"
-lede: "Away from research, there's always time for a good game and good company. Join me for a match, or tell me what you've been playing."
 ---
 
 <section class="game-invite" aria-labelledby="party-heading" lang="en">
-  <div><p class="eyebrow">CO-OP STARTS HERE</p><h2 id="party-heading">One more game?<br><em>Let's team up.</em></h2><p>I'm Winniechen. You'll find my player IDs below.<br class="game-wide-break"> Add me, pick a game, and let's get to know each other beyond the lab.</p><a class="game-jump" href="#game-roster">Find my player IDs <span aria-hidden="true">↓</span></a></div>
+  <div><p class="eyebrow">CO-OP STARTS HERE</p><h2 id="party-heading">One more game?<br><em>Let's team up.</em></h2><p>I'm Winnie. I go by <strong>Winniechen</strong> in games.<br class="game-wide-break"> Feel free to add me—my player IDs are below.</p><a class="game-jump" href="#game-roster">Find my player IDs <span aria-hidden="true">↓</span></a></div>
   <div class="game-invite__art" aria-hidden="true"><span class="game-orbit"></span><svg viewBox="0 0 240 160" fill="none"><path d="M61 43h118l34 78-21 17-43-33H91l-43 33-21-17 34-78Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/><path d="M77 58v34M60 75h34" stroke="currentColor" stroke-width="6"/><circle cx="164" cy="65" r="5" fill="currentColor"/><circle cx="182" cy="83" r="5" fill="currentColor"/><path d="M106 43V24h28V9" stroke="currentColor" stroke-width="3"/></svg><span class="game-art-caption">GOOD GAMES. GOOD COMPANY.</span></div>
 </section>
 
@@ -19,7 +18,7 @@ lede: "Away from research, there's always time for a good game and good company.
   {% for game in site.data.games %}
     <article class="game-card game-card--{{ game.theme }}">
       <div class="game-card__art" aria-hidden="true"><span class="game-card__number">{{ game.number }}</span><span class="game-card__symbol"></span><span class="game-card__arena">{{ game.arena }}</span></div>
-      <div class="game-card__body"><p class="game-card__type">{{ game.type }}</p><h3>{{ game.title }}</h3><p class="game-card__description">{{ game.description }}</p><p class="game-card__invitation">{{ game.invitation }}</p>
+      <div class="game-card__body"><p class="game-card__type">{{ game.type }}</p><h3>{{ game.title }}</h3>
         <div class="game-account"><span>{{ game.account_label }}</span><strong data-player-id>{{ game.account }}</strong><button class="game-copy" type="button" data-copy-id="{{ game.account | escape }}" aria-label="Copy {{ game.title }} ID: {{ game.account | escape }}" hidden>Copy ID <span aria-hidden="true">↗</span></button><span class="game-copy-status" role="status" aria-live="polite"></span></div>
       </div>
     </article>
@@ -28,15 +27,15 @@ lede: "Away from research, there's always time for a good game and good company.
 </section>
 
 <section class="game-steam" aria-labelledby="steam-heading" lang="en">
-  <div class="game-steam__intro"><p class="eyebrow">02 / STEAM LIBRARY</p><h2 id="steam-heading">More worlds.<br><em>More to explore.</em></h2><p>You'll find me on Steam as <strong>Winniechen</strong>. Add me as a friend or recommend a game you love. Browse my library to find something we've both played—or something we could try together.</p></div>
+  <div class="game-steam__intro"><p class="eyebrow">02 / STEAM LIBRARY</p><h2 id="steam-heading">Find me on<br><em>Steam.</em></h2><p>My Steam display name is <strong>Winniechen</strong>. Add me as a friend, or browse my library to find a game we could play together.</p></div>
   <div class="game-steam__panel"><span class="game-steam__label">PLAYER PROFILE / STEAM</span><div class="game-account"><span>Steam display name</span><strong data-player-id>Winniechen</strong><button type="button" class="game-copy" data-copy-id="Winniechen" aria-label="Copy Steam display name Winniechen" hidden>Copy name <span aria-hidden="true">↗</span></button><span class="game-copy-status" role="status" aria-live="polite"></span></div><a class="game-steam__primary" href="https://steamcommunity.com/profiles/76561198837254086/" target="_blank" rel="noopener noreferrer">Visit my Steam profile <span aria-hidden="true">↗</span></a><a class="game-steam__secondary" href="https://steamcommunity.com/profiles/76561198837254086/games/?tab=all" target="_blank" rel="noopener noreferrer">Browse my game library <span aria-hidden="true">↗</span></a><p>Library visibility depends on Steam sign-in and privacy settings.</p></div>
 </section>
 <section class="steam-played" aria-labelledby="steam-played-heading" lang="en">
-  <div class="game-section-heading"><div><p class="eyebrow">03 / TIME WELL PLAYED</p><h2 id="steam-played-heading">A few worlds I've spent time in</h2></div></div>
+  <div class="game-section-heading"><div><p class="eyebrow">03 / TIME WELL PLAYED</p><h2 id="steam-played-heading">A few games from my library</h2></div></div>
   <p class="steam-played__note">Selected games from <a href="https://steamcommunity.com/profiles/76561198837254086/games/?tab=all" target="_blank" rel="noopener noreferrer">my Steam library</a>. Playtime recorded on October 16, 2026.</p>
   <div class="steam-played__grid">
   {% for game in site.data.steam-games %}
-    <article class="steam-played__card"><div class="steam-played__meta"><span>{{ game.genre }}</span><span>{{ game.hours }} <abbr title="hours played">hrs</abbr></span></div><h3><a href="{{ game.url }}" target="_blank" rel="noopener noreferrer">{{ game.title }} <span aria-hidden="true">↗</span></a></h3><p>{{ game.description }}</p></article>
+    <article class="steam-played__card"><div class="steam-played__meta"><span>{{ game.genre }}</span><span>{{ game.hours }} <abbr title="hours played">hrs</abbr></span></div><h3><a href="{{ game.url }}" target="_blank" rel="noopener noreferrer">{{ game.title }} <span aria-hidden="true">↗</span></a></h3></article>
   {% endfor %}
   </div>
 </section>

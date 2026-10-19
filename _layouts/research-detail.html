@@ -4,24 +4,21 @@ layout: default
 {% assign is_talk = false %}
 {% if page.collection == 'talks' %}{% assign is_talk = true %}{% endif %}
 <main id="main" class="interior-shell detail-shell" tabindex="-1">
-  <div class="inner-topline"><a href="{{ site.baseurl }}/{% if is_talk %}talks{% else %}publications{% endif %}/">← All {% if is_talk %}talks{% else %}publications{% endif %}</a><span>{% if is_talk %}TALK NOTES{% else %}RESEARCH PROJECT{% endif %} / {{ page.date | date: '%Y' }}</span></div>
+  <div class="inner-topline"><a href="{{ site.baseurl }}/{% if is_talk %}talks{% else %}publications{% endif %}/">← All {% if is_talk %}talks{% else %}publications{% endif %}</a></div>
   <article class="research-article">
     <header class="detail-header">
-      <p class="eyebrow">{% if is_talk %}IDEAS / IN CONVERSATION{% else %}{{ page.research_topic | upcase }}{% endif %}</p>
       <h1>{{ page.title }}</h1>
       {% if page.authors %}<p class="detail-authors">{{ page.authors | escape | replace: "Feng Chen", "<strong>Feng Chen</strong>" }}</p>{% endif %}
       {% if page.author_note %}<p class="detail-author-note">{{ page.author_note }}</p>{% endif %}
-      <div class="detail-meta">{% if is_talk %}<span class="venue-badge">{{ page.type | default: "Talk" }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time><span>{{ page.location }}</span>{% else %}<span class="venue-badge{% if page.display_venue %} venue-badge--conference{% endif %}">{{ page.display_venue | default: page.venue }}</span><span>{% if page.display_year %}{{ page.display_year }}{% else %}{{ page.date | date: '%Y' }}{% endif %}</span>{% endif %}</div>
-      {% if page.paperurl or page.project_url or page.slidesurl %}<div class="detail-actions">{% if page.paperurl %}<a class="personal-button" href="{{ page.paperurl }}">READ PAPER <span aria-hidden="true">↗</span></a>{% endif %}{% if page.project_url %}<a class="outline-button" href="{{ page.project_url }}">PROJECT WEBSITE <span aria-hidden="true">↗</span></a>{% endif %}{% if page.slidesurl %}<a class="outline-button" href="{{ page.slidesurl }}">VIEW SLIDES <span aria-hidden="true">↗</span></a>{% endif %}</div>{% endif %}
+      <div class="detail-meta">{% if is_talk %}<time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %d, %Y' }}</time><span>{{ page.location }}</span>{% else %}<span>{{ page.display_venue | default: page.venue }}</span><span>{% if page.display_year %}{{ page.display_year }}{% else %}{{ page.date | date: '%Y' }}{% endif %}</span>{% if page.research_topic %}<span>{{ page.research_topic }}</span>{% endif %}{% endif %}</div>
+      {% if is_talk %}<p class="detail-venue">{{ page.venue }}</p>{% endif %}
+      {% if page.display_year %}<p class="detail-author-note">First preprint: {{ page.date | date: '%Y' }}.</p>{% endif %}
+      {% if page.paperurl or page.project_url or page.slidesurl %}<div class="resource-links detail-actions">{% if page.paperurl %}<a href="{{ page.paperurl }}">Paper</a>{% endif %}{% if page.project_url %}<a href="{{ page.project_url }}">Project website</a>{% endif %}{% if page.slidesurl %}<a href="{{ page.slidesurl }}">Slides</a>{% endif %}</div>{% endif %}
     </header>
     <div class="detail-grid">
       <div class="detail-prose">{{ content }}</div>
-      <aside class="detail-aside" aria-label="{% if is_talk %}Event information{% else %}Project information{% endif %}">
-        <div class="detail-facts"><h2>{% if is_talk %}THE SESSION{% else %}AT A GLANCE{% endif %}</h2><dl>{% if is_talk %}<dt>Venue</dt><dd>{{ page.venue }}</dd><dt>Location</dt><dd>{{ page.location }}</dd><dt>Date</dt><dd>{{ page.date | date: '%B %d, %Y' }}</dd>{% else %}<dt>Research area</dt><dd>{{ page.research_topic }}</dd><dt>Publication</dt><dd>{{ page.display_venue | default: page.venue }} · {% if page.display_year %}{{ page.display_year }}{% else %}{{ page.date | date: '%Y' }}{% endif %}</dd>{% if page.display_year %}<dt>First preprint</dt><dd>{{ page.date | date: '%Y' }}</dd>{% endif %}{% endif %}</dl></div>
-        <div class="detail-contact"><span class="status-dot" aria-hidden="true"></span><h2>Let's compare notes.</h2><p>Questions about {% if is_talk %}the talk{% else %}this work{% endif %}? I'd be happy to chat.</p><a class="text-link" href="mailto:cf24@connect.hku.hk">Get in touch <span aria-hidden="true">↗</span></a></div>
-      </aside>
     </div>
     {% if page.citation %}<section class="detail-citation"><h2>Citation</h2><p>{{ page.citation }}</p></section>{% endif %}
-    <footer class="detail-bottom"><span>KEEP EXPLORING</span><a href="{{ site.baseurl }}/{% if is_talk %}talks{% else %}publications{% endif %}/">Back to {% if is_talk %}talks{% else %}publications{% endif %} <span aria-hidden="true">↗</span></a></footer>
+    <footer class="detail-bottom"><a href="{{ site.baseurl }}/{% if is_talk %}talks{% else %}publications{% endif %}/">← Back to {% if is_talk %}talks{% else %}publications{% endif %}</a></footer>
   </article>
 </main>

@@ -1,21 +1,16 @@
 ---
 layout: library
-title: "Talks & Presentations"
+title: "Talks"
 permalink: /talks/
 author_profile: false
-section_label: "Talks"
-kicker: "IDEAS / IN CONVERSATION"
-lede: "Sharing ideas about robot learning, data, and simulation. Notes from seminars and research conversations."
 ---
 
-<div class="collection-toolbar"><p><strong>{{ site.talks.size }}</strong> {% if site.talks.size == 1 %}talk{% else %}talks{% endif %}</p>{% if site.talkmap_link %}<a class="text-link" href="{{ site.baseurl }}/talkmap.html">Explore the map <span aria-hidden="true">↗</span></a>{% endif %}</div>
 <div class="talk-list">
 {% assign talks = site.talks | sort: 'date' | reverse %}
 {% for post in talks %}
 <article class="talk-card">
-  <div class="talk-date" aria-label="{{ post.date | date: '%B %d, %Y' }}"><span>{{ post.date | date: '%b' | upcase }}</span><strong>{{ post.date | date: '%d' }}</strong><span>{{ post.date | date: '%Y' }}</span></div>
-  <div><div class="publication-card__meta"><span class="venue-badge venue-badge--talk">{{ post.type }}</span><span>{{ post.location }}</span></div><h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2><p class="talk-venue">{{ post.venue }}</p><p class="publication-summary">{{ post.excerpt }}</p><a class="text-link" href="{{ site.baseurl }}{{ post.url }}">Read the talk notes <span aria-hidden="true">↗</span></a></div>
+  <time class="talk-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %d, %Y' }}</time>
+  <div><h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2><p class="talk-venue">{{ post.venue }} · {{ post.location }}</p><p class="publication-summary">{{ post.excerpt }}</p><div class="resource-links"><a href="{{ site.baseurl }}{{ post.url }}">Talk summary</a>{% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}</div></div>
 </article>
 {% endfor %}
 </div>
-<div class="library-outro"><div><p class="eyebrow">CONTINUE THE CONVERSATION</p><h2>Let's talk robotics.</h2><p>For seminar invitations or research discussions, feel free to get in touch.</p></div><a class="outline-button" href="mailto:cf24@connect.hku.hk">SAY HELLO <span aria-hidden="true">↗</span></a></div>
