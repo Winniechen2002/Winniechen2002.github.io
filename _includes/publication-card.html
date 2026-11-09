@@ -3,6 +3,7 @@
   <div class="publication-card__body">
     <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
     {% if post.authors %}<p class="publication-authors">{{ post.authors | escape | replace: "Feng Chen", "<strong>Feng Chen</strong>" }}</p>{% endif %}
+    {% if post.author_note %}<small class="publication-author-note">{{ post.author_note | escape }}</small>{% endif %}
     <p class="publication-venue">{{ post.display_venue | default: post.venue }}</p>
     <div class="resource-links">{% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}{% if post.project_url %}<a href="{{ post.project_url }}">Project website</a>{% endif %}<a href="{{ site.baseurl }}{{ post.url }}">About this work</a></div>
   </div>

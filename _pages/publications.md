@@ -12,4 +12,3 @@ author_profile: false
 {% include publication-card.html index=forloop.index %}
 {% endfor %}
 </div>
-<p class="publication-author-note">* Equal contribution; † Project leader.</p>
